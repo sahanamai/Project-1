@@ -83,6 +83,9 @@ document.querySelector("#submit").addEventListener("click", function(event){
  
 
   });
+  document.getElementById("input").innerHTML =JSON.parse(localStorage.getItem("USR_VIN"));
+  console.log(JSON.parse(localStorage.getItem("USR_VIN")));//get item from local storage
+
 });
 
 
