@@ -21,3 +21,6 @@ input{
      margin: 10px 10px;
     cursor: pointer;
 }
+.center-align{
+ text-align: center;
+}
