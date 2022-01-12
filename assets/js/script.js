@@ -1,3 +1,5 @@
+// localStorage.clear();
+document.getElementById("input").value = localStorage.getItem("USR_VIN");
 var MODEL = "";  //returns the model type --- result.Model
 var MODEL_YEAR = ""; //returns the model year --- result.ModelYear
 var MAKE = ""; //returns the manufacturer --- result.Make
@@ -28,9 +30,28 @@ var rows_text         = document.getElementById("rows");
 var top_speed_text    = document.getElementById("top-speed");
 var vehicle_type_text = document.getElementById("vehicle-type");
 
+//set all the headers to not display on page load.
+document.addEventListener("DOMContentLoaded", function(){
+  document.getElementById("vehicle-image").style.display = "none";
+  document.getElementById("info").style.display = "none";
+  document.getElementById("errors").style.display = "none";
+
+});
+
+
+
+
+
 document.querySelector("#submit").addEventListener("click", function(event){
   event.preventDefault();
   USR_VIN = document.getElementById("input").value;
+  document.getElementById("vehicle-image").style.display = "none";
+  document.getElementById("info").style.display = "none";
+  document.getElementById("errors").style.display = "none";
+ 
+  localStorage.setItem("USR_VIN",document.getElementById("input").value);//use local storage to save the users inputss
+  
+  
   $.ajax({
 	  url: "https://vpic.nhtsa.dot.gov/api//vehicles/DecodeVinValues/" + USR_VIN + "?format=json",
 	  type: "GET",
@@ -45,15 +66,24 @@ document.querySelector("#submit").addEventListener("click", function(event){
       MAKE = result.Results[0].Make;  console.log("make: "+MAKE); make_text.innerHTML = MAKE;
       DRIVE_TYPE = result.Results[0].DriveType;  console.log("drive type: "+DRIVE_TYPE); drive_type_text.innerHTML = DRIVE_TYPE;
       FUEL_TYPE = result.Results[0].FuelTypePrimary;  console.log("fuel type: "+FUEL_TYPE); fuel_type_text.innerHTML = FUEL_TYPE;
-      ERROR_CODE = result.Results[0].ErrorCode;  console.log("error codes: "+ERROR_CODE); error_code_number.innerHTML = ERROR_CODE;
-      ERROR_TEXT = result.Results[0].ErrorText;  console.log("error text: "+ERROR_TEXT); error_code_text.innerHTML = ERROR_TEXT;
       ENGINE_CYLINDERS = result.Results[0].EngineCylinders;  console.log("engine cylinders: "+ENGINE_CYLINDERS); cylinders_text.innerHTML = ENGINE_CYLINDERS;
       ENGINE_HP = result.Results[0].EngineHP;  console.log("horsepower: "+ENGINE_HP); engine_hp_text.innerHTML = ENGINE_HP;
       SEATS = result.Results[0].Seats;  console.log("seats: "+SEATS); seats_text.innerHTML =  SEATS;
       SEAT_ROWS = result.Results[0].SeatRows;  console.log("seat rows: "+SEAT_ROWS); rows_text.innerHTML = SEAT_ROWS;
-      TOP_SPEED = result.Results[0].TopSpeedMPH;  console.log("top speed: "+TOP_SPEED); top_speed_text.innerHTML = TOP_SPEED;
+      TOP_SPEED = result.Results[0].TopSpeedMPH;  console.log("top speed: "+TOP_SPEED + "mph"); top_speed_text.innerHTML = TOP_SPEED;
       VEHICLE_TYPE = result.Results[0].VehicleType; console.log("vehicle type: "+VEHICLE_TYPE); vehicle_type_text.innerHTML = VEHICLE_TYPE;
+      ERROR_CODE = result.Results[0].ErrorCode;  console.log("error codes: "+ERROR_CODE); error_code_number.innerHTML = ERROR_CODE;
+      ERROR_TEXT = result.Results[0].ErrorText;  console.log("error text: "+ERROR_TEXT); error_code_text.innerHTML = ERROR_TEXT;
       
+      user_vin_text.innerHTML = localStorage.getItem("USR_VIN");
+      if (ERROR_CODE == 0){
+        console.log("no errors");
+        document.getElementById("info").style.display = "inline";
+        document.getElementById("vehicle-image").style.display = "inline";
+      }else{
+        console.log("error code")
+        document.getElementById("errors").style.display = "inline";  
+      }
       
       $.ajax({
         url:"https://salty-mountain-68764.herokuapp.com/https://imsea.herokuapp.com/api/1?q="+ MAKE + " "+ MODEL,
@@ -79,13 +109,10 @@ document.querySelector("#submit").addEventListener("click", function(event){
 		console.log(xhr.status);
 		console.log(thrownError);
 	}
-  
- 
-
   });
-  document.getElementById("input").innerHTML =JSON.parse(localStorage.getItem("USR_VIN"));
-  console.log(JSON.parse(localStorage.getItem("USR_VIN")));//get item from local storage
+  
 
+  
 });
 
 

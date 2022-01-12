@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title> VIN Formation</title>
      <link rel="stylesheet" type="text/css" href="./assets/css/style.css" /> 
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400&family=Merriweather:wght@700&display=swap"
     rel="stylesheet" />
     <script
@@ -14,19 +13,21 @@
       crossorigin="anonymous"
     ></script>
   </head>
-
-  <!-- <header>
-    <div>
-      <h1>Clayton's Big Rigs</h1>
-    </div>
-  </header> -->
   <body>
+      
+    <div class="content">
+        <form id="search-form" class="form">
+            <h1>VIN Formation</h1>
+            <input type="text" id="input" placeholder="please enter VIN number" name="VIN" maxlength="100"/>
+            <button id="submit" type="submit">Submit</button>
+        </form>
+    </div>
     <!--hide() and show()-->
     <div id="VIN">
       <h1>Showing results for <span id="type">vehicle type</span></h1>
       <img id= "vehicle-image" alt="vehicle image"> 
       <div id ="info">
-        <h2>Vehicle Model   </h2>
+        <h2>Vehicle Model</h2>
         <p id="model"> </p>
         <h2>Model year</h2> 
         <p id="model-year"> </p> 
@@ -51,20 +52,13 @@
         <h2>Vehicle Type</h2>
         <p id="vehicle-type"></p>
       </div>
-      <div id = "errors">
+      <div id ="errors"> 
         <h2>Error Code</h2>
         <p id="error-code"></p>
         <h2>Error Text</h2>
         <p id="error-text"></p>
       </div>
     </div>
-    <div class="content">
-      <form id="search-form" class="form">
-          <h1>VIN Formation</h1>
-          <input type="text" id="input" placeholder="please enter VIN number" name="VIN" maxlength="100"/>
-          <button id="submit" type="submit">Submit</button>
-      </form>
-  </div>
     <script src="./assets/js/script.js"></script>
   </body>
 </html>
