@@ -1,0 +1,62 @@
+body{
+    /* margin-top: 0px; */
+    background-color: #c4d8f2;
+  }
+
+  h2 {
+    color: whitesmoke;
+  }
+  .content {
+    background-color: #8ea3bf;
+    height: 300px;
+    width: 700px;
+    padding: 20px;
+  }
+  #VIN {
+    background-color: tomato;
+  }
+  input{
+      width:20%;
+      height: 20px;
+      padding: 12px 20px;
+      border-radius: 4px;
+      color: #89888c;
+      border: 3px solid rgb(151, 148, 148);
+  }
+  #submit{
+      border: 3px solid rgb(167, 163, 163);
+      border-radius: 4px;
+      background-color: #525852;
+      border: none;
+      color: white;
+      padding: 16px 32px;
+      text-decoration: none;
+       margin: 10px 10px;
+      cursor: pointer;
+  }
+
+/*   
+  body{
+
+    background-color: #8fbbaf;
+  }
+  input{
+      width:20%;
+      height: 20px;
+      padding: 12px 20px;
+      border-radius: 4px;
+     box-sizing: border-box;
+      border: 3px solid rgb(151, 148, 148);
+  }
+  #submit{
+      border: 3px solid rgb(167, 163, 163);
+      border-radius: 4px;
+      background-color: #525852;
+      border: none;
+      color: white;
+      padding: 16px 32px;
+      text-decoration: none;
+       margin: 10px 10px;
+      cursor: pointer;
+  }
+  */
