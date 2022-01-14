@@ -38,3 +38,21 @@ input{
     text-size-adjust: 100px;
     ;
 }
+
+#info {
+    color: white;
+    background-color: rgb(90, 102, 70);
+}
+/* #card1 {
+    color: white;
+    background-color: rgb(90, 102, 70);
+} 
+#card2 {
+    color: white;
+    background-color: rgb(90, 102, 70);
+}  */
+
+#errors {
+    color: white;
+    background-color: rgb(90, 102, 70);
+}
