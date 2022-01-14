@@ -40,12 +40,14 @@ var seats_text        = document.getElementById("seats");
 var rows_text         = document.getElementById("rows");
 var top_speed_text    = document.getElementById("top-speed");
 var vehicle_type_text = document.getElementById("vehicle-type");
+var vehicle_type_h1   = document.getElementById("type");
 
 //set all the headers to not display on page load.
 document.addEventListener("DOMContentLoaded", function(){
   document.getElementById("vehicle-image").style.display = "none";
   document.getElementById("info").style.display = "none";
   document.getElementById("errors").style.display = "none";
+  document.getElementById("VIN").style.display = "none";
 });
 
 
@@ -62,6 +64,7 @@ document.querySelector("#submit").addEventListener("click", function(event){
   document.getElementById("vehicle-image").style.display = "none";
   document.getElementById("info").style.display = "none";
   document.getElementById("errors").style.display = "none";
+  document.getElementById("VIN").style.display = "inline";
  
   localStorage.setItem("USR_VIN",document.getElementById("input").value);//use local storage to save the users inputss
   
@@ -184,6 +187,7 @@ document.querySelector("#submit").addEventListener("click", function(event){
         error_code_text.innerHTML = "No Data";
       }
 
+      vehicle_type_h1.innerHTML = MAKE +" "+ MODEL;
 
       //The next block of code is used to make sure that vehicle info is only displayed if the user input a valid VIN
       //if the VIN is not valid then the error section will display.
