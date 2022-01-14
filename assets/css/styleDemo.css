@@ -62,3 +62,7 @@ input{
     color: white;
     background-color: rgb(90, 102, 70);
 }
+.card-panel {
+    position: absolute;
+  right: 650px;
+}
