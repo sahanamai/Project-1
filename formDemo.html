@@ -21,7 +21,7 @@
   </header> -->
   <body>
     <nav>
-      <div class="nav-wrapper">
+      <div class="nav-wrapper ">
         <a href="#" class="brand-logo">VIN Formation</a>
       </div>
     </nav>
@@ -32,69 +32,60 @@
           <input type="text" id="input" placeholder="please enter VIN number" name="VIN" maxlength="100"/>
           <button id="submit" type="submit">Submit</button>
       </form>
-  </div>      
+    </div>      
     <!--hide() and show()-->
-    <div id="VIN">
-      <section class="card">
-      <h2>Results for <span id="type">vehicle type</span></h2>
-      <img id= "vehicle-image" alt="vehicle image"> 
-      </section>
-      <div id ="info">
-        <section class="card">
-        <h2>Vehicle Model   </h2>
+    <div id="VIN" class="row">
+      <h4>Results for <span id="type">vehicle type</span></h4>
+      <img id= "vehicle-image" alt="vehicle image" class="col 12 offset-12"> 
+      <div id ="info" class="card-panel col 6 " >
+        <!-- #33691e light-green darken-4 -->
+        <h5>Vehicle Model   </h5>
         <p id="model"> </p>
-        </section>
-        <section class="card">
-        <h2>Model year</h2> 
-        <p id="model-year"> </p> 
-        </section>
-        <section class="card">
-        <h2> Make</h2>
+        <div class="divider #fff8e1 amber lighten-5"></div>
+        <h5>Model year</h5> 
+        <p id="model-year"> </p>
+        <div class="divider #fff8e1 amber lighten-5"></div> 
+        <h5> Make</h5>
         <p id="make"> </p>
-        </section>
-        <section class="card">
-        <h2> User VIN</h2>
+        <div class="divider #fff8e1 amber lighten-5"></div>
+        <h5> User VIN</h5>
         <p id="user-vin"></p>
-        </section>
-        <section class="card">
-        <h2> Drive type</h2>
+        <div class="divider #fff8e1 amber lighten-5"></div>
+        <h5> Drive type</h5>
         <p id="drive-type"></p>
-        </section>
-        <section class="card">
-        <h2> Fuel Type</h2>
+        <div class="divider #fff8e1 amber lighten-5"></div>
+        <h5> Fuel Type</h5>
         <p id="fuel type"></p>
-        </section>
-        <section class="card">
-        <h2>Engine Cylinders</h2>
+        <!-- new div here -->
+        <div class="divider #fff8e1 amber lighten-5"></div>
+        <h5>Engine Cylinders</h5>
         <p id="cylinder"></p>
-        </section>
-        <section class="card">
-        <h2>Engine HP</h2>
+        <div class="divider #fff8e1 amber lighten-5"></div>
+        <h5>Engine HP</h5>
         <p id=engine-hp></p>
-        </section>
-        <section class="card">
-        <h2>Seats</h2>
+        <div class="divider #fff8e1 amber lighten-5"></div>
+        <h5>Seats</h5>
         <p id="seats"> </p>
-        </section>
-        <section class="card">
-        <h2>Seat Rows</h2>
+        <div class="divider #fff8e1 amber lighten-5"></div>
+        <h5>Seat Rows</h5>
         <p id="rows"></p>
-        </section>
-        <section class="card">
-        <h2>Top Speed</h2>
+        <div class="divider #fff8e1 amber lighten-5"></div>
+        <h5>Top Speed</h5>
         <p id="top-speed"></p>
-        </section>
-        <section class="card">
-        <h2>Vehicle Type</h2>
+        <div class="divider #fff8e1 amber lighten-5"></div>
+        <h5>Vehicle Type</h5>
         <p id="vehicle-type"></p>
         </section>
       </div>
-      <div id = "errors">
-        <h2>Error Code</h2>
+    <div class="row">
+      <div id = "errors" class="card-panel col 12">
+        <h5>Error Code</h5>
         <p id="error-code"></p>
-        <h2>Error Text</h2>
+        <div class="divider #fff8e1 amber lighten-5"></div>
+        <h5>Error Text</h5>
         <p id="error-text"></p>
       </div>
+    </div>
     </div>
     <script src="./assets/js/script.js"></script>
   </body>
