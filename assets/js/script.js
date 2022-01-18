@@ -85,7 +85,7 @@ document.querySelector("#submit").addEventListener("click", function(event){
 
       //------------retrieve the vehicle model info------------------------
       MODEL = result.Results[0].Model;  //console.log("model: "+MODEL); 
-      if(MODEL.length > 1 ){
+      if(MODEL.length > 0 ){
         model_text.innerHTML = MODEL;
       }else{
         model_text.innerHTML = "No Data";
@@ -93,7 +93,7 @@ document.querySelector("#submit").addEventListener("click", function(event){
 
       //------------retrieve the vehicle model year info------------------------
       MODEL_YEAR = result.Results[0].ModelYear ;  //console.log("year: "+MODEL_YEAR); 
-      if(MODEL_YEAR.length > 1 ){
+      if(MODEL_YEAR.length > 0 ){
         model_year_text.innerHTML = MODEL_YEAR;
       }else{
         model_year_text.innerHTML = "No Data";
@@ -101,7 +101,7 @@ document.querySelector("#submit").addEventListener("click", function(event){
 
       //------------retrieve the vehicle make info------------------------
       MAKE = result.Results[0].Make;  //console.log("make: "+MAKE); 
-      if(MAKE.length > 1 ){
+      if(MAKE.length > 0 ){
         make_text.innerHTML = MAKE;
       }else{
         make_text.innerHTML = "No Data";
@@ -109,7 +109,7 @@ document.querySelector("#submit").addEventListener("click", function(event){
 
       //------------retrieve the vehicle drive type info------------------------
       DRIVE_TYPE = result.Results[0].DriveType;  //console.log("drive type: "+DRIVE_TYPE); 
-      if (DRIVE_TYPE.length > 1 ){
+      if (DRIVE_TYPE.length > 0 ){
         drive_type_text.innerHTML = DRIVE_TYPE;
       }else {
         drive_type_text.innerHTML = "No Data"
@@ -117,7 +117,7 @@ document.querySelector("#submit").addEventListener("click", function(event){
 
       //------------retrieve the vehicle fuel type info------------------------
       FUEL_TYPE = result.Results[0].FuelTypePrimary;  //console.log("fuel type: "+FUEL_TYPE); 
-      if(FUEL_TYPE.length > 1 ){
+      if(FUEL_TYPE.length > 0 ){
         fuel_type_text.innerHTML = FUEL_TYPE;
       }else{
         fuel_type_text.innerHTML = "No Data";
@@ -125,7 +125,7 @@ document.querySelector("#submit").addEventListener("click", function(event){
 
       //------------retrieve the vehicle engine cylinders info------------------------
       ENGINE_CYLINDERS = result.Results[0].EngineCylinders;  //console.log("engine cylinders: "+ENGINE_CYLINDERS); 
-      if(ENGINE_CYLINDERS.length > 1 ){
+      if(ENGINE_CYLINDERS.length > 0 ){
         cylinders_text.innerHTML = ENGINE_CYLINDERS;
       }else{
         cylinders_text.innerHTML = "No Data";
@@ -133,7 +133,7 @@ document.querySelector("#submit").addEventListener("click", function(event){
 
       //------------retrieve the vehicle horsepower info------------------------
       ENGINE_HP = result.Results[0].EngineHP;  //console.log("horsepower: "+ENGINE_HP); 
-      if(ENGINE_HP.length > 1 ){
+      if(ENGINE_HP.length > 0 ){
         engine_hp_text.innerHTML = ENGINE_HP;
       }else{
         engine_hp_text.innerHTML = "No Data";
@@ -141,7 +141,7 @@ document.querySelector("#submit").addEventListener("click", function(event){
 
       //------------retrieve the vehicle seats info------------------------
       SEATS = result.Results[0].Seats;  //console.log("seats: "+SEATS); 
-      if(SEATS.length > 1 ){
+      if(SEATS.length > 0 ){
         seats_text.innerHTML =  SEATS;
       }else{
         seats_text.innerHTML = "No Data";
@@ -149,7 +149,7 @@ document.querySelector("#submit").addEventListener("click", function(event){
 
       //------------retrieve the vehicle rows info------------------------
       SEAT_ROWS = result.Results[0].SeatRows;  //console.log("seat rows: "+SEAT_ROWS); 
-      if(SEAT_ROWS.length > 1 ){
+      if(SEAT_ROWS.length > 0 ){
         rows_text.innerHTML = SEAT_ROWS;
       }else{
         rows_text.innerHTML = "No Data";
@@ -157,7 +157,7 @@ document.querySelector("#submit").addEventListener("click", function(event){
 
       //------------retrieve the vehicle top speed info------------------------
       TOP_SPEED = result.Results[0].TopSpeedMPH;  //console.log("top speed: "+TOP_SPEED + "mph"); 
-     if(TOP_SPEED.length > 1 ){
+     if(TOP_SPEED.length > 0 ){
         top_speed_text.innerHTML = TOP_SPEED;
       }else{
         top_speed_text.innerHTML = "No Data";
@@ -165,7 +165,7 @@ document.querySelector("#submit").addEventListener("click", function(event){
 
       //------------retrieve the vehicle type info------------------------
       VEHICLE_TYPE = result.Results[0].VehicleType; //console.log("vehicle type: "+VEHICLE_TYPE); 
-      if(VEHICLE_TYPE.length > 1 ){
+      if(VEHICLE_TYPE.length > 0 ){
         vehicle_type_text.innerHTML = VEHICLE_TYPE;
       }else{
         vehicle_type_text.innerHTML = "No Data";
@@ -173,7 +173,7 @@ document.querySelector("#submit").addEventListener("click", function(event){
 
       //------------retrieve any error code values related to the VIN provided------------------------
       ERROR_CODE = result.Results[0].ErrorCode;  //console.log("error codes: "+ERROR_CODE); 
-      if(ERROR_CODE.length > 1 ){
+      if(ERROR_CODE.length > 0 ){
         error_code_number.innerHTML = ERROR_CODE;
       }else{
         error_code_number.innerHTML = "No Data";
@@ -181,7 +181,7 @@ document.querySelector("#submit").addEventListener("click", function(event){
       
       //------------retrieve the text for the corosponding error codes related to the VIN provided------------------------
       ERROR_TEXT = result.Results[0].ErrorText;  //console.log("error text: "+ERROR_TEXT); 
-      if(ERROR_TEXT.length > 1 ){
+      if(ERROR_TEXT.length > 0 ){
         error_code_text.innerHTML = ERROR_TEXT;
       }else{
         error_code_text.innerHTML = "No Data";
