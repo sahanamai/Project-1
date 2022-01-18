@@ -13,7 +13,7 @@ body{
     padding: 20px;
   }
   #VIN {
-    background-color: tomato;
+    background-color: darkgray;
   }
   input{
       width:20%;
@@ -21,7 +21,7 @@ body{
       padding: 12px 20px;
       border-radius: 4px;
       color: #89888c;
-      border: 3px solid rgb(151, 148, 148);
+      border: 3px solid rgb(65, 42, 42);
   }
   #submit{
       border: 3px solid rgb(167, 163, 163);
