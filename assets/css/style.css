@@ -33,7 +33,7 @@ body {
 input{
     width:20%;
     height: 20px;
-    padding: 12px 20px;
+    padding: 12px 10px;
     border-radius: 4px;
     color: #89888c;
     border: 3px solid rgb(104, 72, 72);
@@ -62,7 +62,6 @@ input{
     color: white;
     background-color: rgb(90, 102, 70);
 }
-.card-panel {
-    position: absolute;
-  right: 650px;
+#vehicle_image{
+    margin-top: 10px;
 }
