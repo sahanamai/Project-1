@@ -35,10 +35,12 @@
     </div>      
     <!--hide() and show()-->
     <div id="VIN" class="row">
-      <h4>Showing results for <span id="type">vehicle type</span></h4>
       
-      <div id ="info" class="card-panel col s3 offset-s2" >
+      
+      <div id ="info" class="card-panel col s4 offset-s1" >
         <!-- #33691e light-green darken-4 -->
+        <h4>Showing results for <span id="type">vehicle type</span></h4>
+        <div class="divider #fff8e1 amber lighten-5"></div>
         <h5>Vehicle Model   </h5>
         <p id="model"> </p>
         <div class="divider #fff8e1 amber lighten-5"></div>
@@ -77,9 +79,10 @@
         <p id="vehicle-type"></p>
         </section>
       </div>
-      <div class = "col s2 offset-s2"> <img id= "vehicle-image" alt="vehicle image" > </div>
+      
+      <div class = "card-panel col s5 offset-s1 z-depth-0" id = "img_background"> <img class = responsive-img id= "vehicle-image" alt="vehicle image" > </div>
     <div class="row">
-      <div id = "errors" class="card-panel col s12">
+      <div id = "errors" class="card-panel col s2 offset-s2">
         <h5>Error Code</h5>
         <p id="error-code"></p>
         <div class="divider #fff8e1 amber lighten-5"></div>
