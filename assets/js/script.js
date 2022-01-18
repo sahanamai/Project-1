@@ -141,7 +141,7 @@ document.querySelector("#submit").addEventListener("click", function(event){
 
       //------------retrieve the vehicle seats info------------------------
       SEATS = result.Results[0].Seats;  //console.log("seats: "+SEATS); 
-      if(SEATS.length > 1 ){
+      if(SEATS.length > 0 ){
         seats_text.innerHTML =  SEATS;
       }else{
         seats_text.innerHTML = "No Data";
@@ -149,7 +149,7 @@ document.querySelector("#submit").addEventListener("click", function(event){
 
       //------------retrieve the vehicle rows info------------------------
       SEAT_ROWS = result.Results[0].SeatRows;  //console.log("seat rows: "+SEAT_ROWS); 
-      if(SEAT_ROWS.length > 1 ){
+      if(SEAT_ROWS.length > 0 ){
         rows_text.innerHTML = SEAT_ROWS;
       }else{
         rows_text.innerHTML = "No Data";
