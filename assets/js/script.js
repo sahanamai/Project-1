@@ -204,7 +204,7 @@ document.querySelector("#submit").addEventListener("click", function(event){
 
       //the folowing block of code is used to retrieve an image of the same vechicle type as the provide VIN
       $.ajax({
-        url:"https://salty-mountain-68764.herokuapp.com/https://imsea.herokuapp.com/api/1?q="+ MAKE + " "+ MODEL,
+        url:"https://salty-mountain-68764.herokuapp.com/https://imsea.herokuapp.com/api/1?q="+ MODEL_YEAR + " " + MAKE + " "+ MODEL,
         type: "GET",
 	      dataType: "JSON",
         success: function(result)

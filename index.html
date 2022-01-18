@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title> VIN Formation</title>
+    <title> VINformation</title>
      <link rel="stylesheet" type="text/css" href="./assets/css/style.css" /> 
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
@@ -22,22 +22,22 @@
   <body>
     <nav>
       <div class="nav-wrapper ">
-        <a href="#" class="brand-logo">VIN Formation</a>
+        <a href="#" class="brand-logo">VINformation</a>
       </div>
     </nav>
     <br>
     <div class="content">
       <form id="search-form" class="form">
-          <h3>VIN Formation</h3>
+          <h3>VINformation</h3>
           <input type="text" id="input" placeholder="please enter VIN number" name="VIN" maxlength="100"/>
           <button id="submit" type="submit">Submit</button>
       </form>
     </div>      
     <!--hide() and show()-->
     <div id="VIN" class="row">
-      <h4>Results for <span id="type">vehicle type</span></h4>
-      <img id= "vehicle-image" alt="vehicle image" class="col 12 offset-12"> 
-      <div id ="info" class="card-panel" >
+      <h4>Showing results for <span id="type">vehicle type</span></h4>
+      
+      <div id ="info" class="card-panel col s3 offset-s2" >
         <!-- #33691e light-green darken-4 -->
         <h5>Vehicle Model   </h5>
         <p id="model"> </p>
@@ -77,8 +77,9 @@
         <p id="vehicle-type"></p>
         </section>
       </div>
+      <div class = "col s2 offset-s2"> <img id= "vehicle-image" alt="vehicle image" > </div>
     <div class="row">
-      <div id = "errors" class="card-panel col 12">
+      <div id = "errors" class="card-panel col s12">
         <h5>Error Code</h5>
         <p id="error-code"></p>
         <div class="divider #fff8e1 amber lighten-5"></div>
