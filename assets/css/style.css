@@ -33,7 +33,7 @@ body {
 input{
     width:20%;
     height: 20px;
-    padding: 12px 20px;
+    padding: 12px 10px;
     border-radius: 4px;
     color: #89888c;
     border: 3px solid rgb(104, 72, 72);
@@ -61,8 +61,12 @@ input{
 #errors {
     color: white;
     background-color: rgb(90, 102, 70);
+    /* width:30%; */
 }
-.card-panel {
-    position: absolute;
-  right: 650px;
+
+#img_background{
+    background-color:beige ;
+    /* margin-top: 30px; */
+    height: 300px;
+    max-width: 100%;
 }
